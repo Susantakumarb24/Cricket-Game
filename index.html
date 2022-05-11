@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="cricket.css">
+    <title>Cricket Game</title>
+    
+</head>
+<body>
+    <div class="container">
+  
+
+        <h5 class="text-center">CRICKET-GAME TASK</h5>
+
+        <div class="row" >
+            <div class="col-lg-6 text-center" >
+                <p>Team 1 Score :<span style="margin:12px;font-weight: bolder;" id="team1_score">0</span></p>
+                <button type="button" class="btn btn-primary" id="hit1" >HIT 1</button>
+            </div>
+            <div class="col-lg-6 text-center">
+                <p>Team 2 Score :<span style="margin:12px;font-weight: bolder;" id="team2_score">0</span></p>
+                 <button type="button" class="btn btn-primary" id="hit2" >HIT 2</button>
+            </div>
+        </div>
+        
+                 
+        <hr>
+        
+        <div class="row" style="justify-content: space-between;">
+            <div class="col-lg-4">
+                
+                <table class="table table-bordered table-hover caption-top" id="team1">
+                    <caption><h4>TEAM 1 SCORE BOARD</h4></caption>
+                </table>
+            </div>
+            <div style="text-align: center;" class="col-lg-4">
+                <button type="button" class="btn btn-success" id="result" onclick="result(team1,team2)">GET RESULT</button>
+                <p id="winner"></p><br>
+                <p id="mom"></p>
+                <button class="btn btn-danger" id="start_again" onclick="window.location.reload()">Start Again</button>
+            </div>
+            <div class="col-lg-4">
+                <table class="table table-bordered table-hover caption-top" id="team2">
+                    <caption><h4>TEAM 2 SCORE BOARD</h4></caption>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <script src="cricket.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script> -->
+</body>
+</html>
