@@ -54,22 +54,22 @@ class ScoreBoard {
 
   
   class Player {
-      id;
+      // id;
       score = 0;
-      balls = [];
+      // balls = [];
     
       constructor() {
       }
       hit() {
         let run = Math.floor(Math.random() * 6);
         this.score += run;
-        this.balls.push(run);
+        // this.balls.push(run);
         return run;
       }
     }
     
     class Team {
-      players = [];
+      // players = [];
       teamScore = 0;
       playerScore=0;
       player;
@@ -91,8 +91,8 @@ class ScoreBoard {
         this.playerScore+=run;
           document.getElementById(`${team}_score`).innerHTML=`${this.teamScore}`;
         
-        console.log('Player ID ', this.player.id);
-        console.log('Player Run ', run);
+        // console.log('Player ID ', this.player.id);
+        // console.log('Player Run ', run);
         
       if(this.col<=6)
       {
@@ -138,7 +138,7 @@ class ScoreBoard {
           
       }
 
-      if(this.row==10 && team=="team2"){
+      if(this.row>10 && team=="team2"){
         (<HTMLInputElement> document.getElementById("result")).disabled = false;
       }
           

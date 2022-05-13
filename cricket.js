@@ -39,21 +39,22 @@ new ScoreBoard("team1");
 new ScoreBoard("team2");
 document.getElementById("start_again").style.visibility = "hidden";
 var Player = /** @class */ (function () {
+    // balls = [];
     function Player() {
+        // id;
         this.score = 0;
-        this.balls = [];
     }
     Player.prototype.hit = function () {
         var run = Math.floor(Math.random() * 6);
         this.score += run;
-        this.balls.push(run);
+        // this.balls.push(run);
         return run;
     };
     return Player;
 }());
 var Team = /** @class */ (function () {
     function Team() {
-        this.players = [];
+        // players = [];
         this.teamScore = 0;
         this.playerScore = 0;
         this.row = 1;
@@ -67,8 +68,8 @@ var Team = /** @class */ (function () {
         this.teamScore += run;
         this.playerScore += run;
         document.getElementById("".concat(team, "_score")).innerHTML = "".concat(this.teamScore);
-        console.log('Player ID ', this.player.id);
-        console.log('Player Run ', run);
+        // console.log('Player ID ', this.player.id);
+        // console.log('Player Run ', run);
         if (this.col <= 6) {
             document.getElementById("".concat(team, "_").concat(this.row).concat(this.col)).innerHTML = run;
             if (run == 0) {
@@ -97,7 +98,7 @@ var Team = /** @class */ (function () {
             console.log(this.max_score_player);
             console.log("player", this.arr.indexOf(this.max_score_player) + 1);
         }
-        if (this.row == 10 && team == "team2") {
+        if (this.row > 10 && team == "team2") {
             document.getElementById("result").disabled = false;
         }
     };
